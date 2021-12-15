@@ -3,13 +3,13 @@ import { ListGroup } from 'react-bootstrap';
 
 function DetalhesAluno({alunos}) {
     const params = useParams();
-    const aluno = alunos.find(a => a._id === params.id)
+    const aluno = alunos.find(a => a.id.toString() === params.id)
 
     return (
         <div>
             <h5>Detalhes do Aluno</h5>
             <ListGroup>
-                <ListGroup.Item>ID: {aluno._id}</ListGroup.Item>
+                <ListGroup.Item>ID: {aluno.id}</ListGroup.Item>
                 <ListGroup.Item>Nome: {aluno.nome}</ListGroup.Item>
                 <ListGroup.Item>Idade: {aluno.idade}</ListGroup.Item>
                 <ListGroup.Item>Telefone: {aluno.telefone}</ListGroup.Item>
